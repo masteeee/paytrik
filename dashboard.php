@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 
 require_once "koneksi.php";
 
@@ -41,6 +41,10 @@ if( !isset($_SESSION['user']) ){
 						<li><a href="tampilpelanggan.php"> Pelanggan </a></li>
 					</ul>
 				</li>
+			<?php } ?>
+			<?php if( $_SESSION['level'] == 'Admin' || $_SESSION['level'] == 'Petugas' ){ ?>
+				<li class="title-menu"><a href="tampilpelanggan.php"><span> Pelanggan </span></a></li>
+				<li class="title-menu"><a href="validasipelanggan.php"><span> Validasi Pelanggan </span></a></li>
 			<?php } ?>
 			<li class="title-menu"><a href="inputtagihan.php"><span> Tagihan </span></a></li>
 			<li class="title-menu"><a href="inputpembayaran.php"><span> Pembayaran </span></a></li>

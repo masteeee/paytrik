@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 
 require_once "koneksi.php";
 
@@ -6,7 +6,7 @@ if( !isset($_SESSION['user']) ){
 	header("Location: index.php");
 }
 
-if( $_SESSION['level'] != "Admin" ){
+if( $_SESSION['level'] != "Admin" && $_SESSION['level'] != "Petugas" ){
 	header("Location: index.php");
 }
 
@@ -173,7 +173,8 @@ $pages 		= ceil($total/$perPage);
 								error.style.display='block';
 								error.innerHTML = 'Data pelanggan tidak ditemukan !';
 							</script>";
-						} ?>
+						}
+					?>
 					</table>
 					<div class="pagination">
 						<ul>

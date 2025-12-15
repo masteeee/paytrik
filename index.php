@@ -32,8 +32,9 @@ if( isset($_SESSION['user']) ){
 			<div class="winput" style="margin-top: 25px;">
 				<button type="submit" name="btn-login" style="width: 100%;"> Login sekarang </button>
 			</div>
-			<p> Masuk dengan no pelanggan jika anda sebagai pelanggan. </p>
-		            <p style="margin-top: 10px;"> Belum punya akun? <a href="registrasi.php">Daftar</a> </p>`r`n</form>
+			            <a href='registrasi.php' class='btn-edit' style='width: 100%; display: inline-block; text-align: center; margin-top: 10px;'> Registrasi </a>
+
+        </form>
 	</div>
 </div>
 </body>
@@ -78,3 +79,5 @@ if( isset($_POST['btn-login']) ){
 }
 
 ?>
+
+

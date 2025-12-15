@@ -6,7 +6,7 @@ if( !isset($_SESSION['user']) ){
 	header("Location: index.php");
 }
 
-if( $_SESSION['level'] != "Admin" ){
+if( $_SESSION['level'] != "Admin" && $_SESSION['level'] != "Petugas" ){
 	header("Location: index.php");
 }
 
@@ -182,3 +182,4 @@ if(isset($_POST['reject'])){
 }
 
 ?>
+
